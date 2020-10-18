@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.parent {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: grid;
+    place-content: center;
+}
+
+.logoReact {
+    height: 10rem;
+    width: 30rem;
+    border: .6rem solid cyan;
+    border-radius: 50%;
+    position: relative;
+    display: grid;
+    place-content: center;
+    animation: rotate 2s linear infinite;
+}
+
+.logoReact::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    border: .6rem solid cyan;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    transform: rotate(120deg);
+}
+
+.logoReact::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: .6rem solid cyan;
+    border-radius: 50%;
+    transform: rotate(60deg);
+}
+
+.circle {
+    height: 4rem;
+    width: 4rem;
+    background-color: cyan;
+    border-radius: 50%;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
